@@ -1,0 +1,27 @@
+.heading {
+
+    @include respond (break-1275) {
+
+        padding: .85rem 2.5rem;
+    }
+
+    width: 100%;
+    padding: .85rem;
+    margin: 5rem 0;
+    color: $bg-grey-700;
+
+    &__primary {
+
+        font-size: 3.4rem;
+    }
+
+    &__secondary {
+
+        font-size: 3.0rem;
+    }
+
+    &__tertiary {
+
+        font-size: 2.6rem;
+    }
+}

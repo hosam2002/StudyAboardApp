@@ -1,0 +1,73 @@
+:root {
+
+    --border-primary: 1px solid #F3F4F6;
+    --shadow-primary: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --color-sky: #0EA5E9;
+    --color-purble: #6b5bc4;
+    --color-white: #fff;
+}
+
+.home {
+
+    width: 100%;
+    & > *:not(:last-child) { margin-bottom: 5rem; }
+}
+
+.home {
+
+    &__caption {
+
+        width: 90%;
+        min-height: 35rem;
+        margin: 0 auto;
+        padding: 5rem;
+
+        border: var(--border-primary);
+        border-radius: 5px;
+        background-color: var(--color-white);
+    
+        @include shadow-lg;
+
+        & > *:not(:last-child) { margin: 0 0 1.5rem 0; }
+    }
+
+    &__title {
+
+        font-size: 2.4rem;
+        color: $bg-sky-700;
+    }
+
+    &__desc {
+
+        @include respond (break-520) {
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: $bg-grey-500;
+    }
+
+    &__link {
+
+        display: inline-block;
+        padding: 1.5rem 2.5rem;
+
+        border-radius: 7px;
+        background-color: $bg-sky-500;
+
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $bg-white
+    }
+
+    &__footer { 
+        
+        width: 100%;
+        text-align: center;
+
+        & > *:not(:last-child) { margin: 0 .85rem 0 0; }
+        & > *:nth-child(2) { background-color: $bg-sky-600; }
+    }
+}

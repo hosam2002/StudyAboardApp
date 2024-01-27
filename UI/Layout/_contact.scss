@@ -1,0 +1,80 @@
+.contact {
+
+    width: 100%
+}
+
+.contact {
+
+    display: flex;
+    justify-content: center;
+
+    &__form {
+
+        @include respond (break-470) { width: 100%; }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > *:not(:last-child) {
+
+            margin: 0 0 1.5rem 0;
+        }
+    }
+
+    &__name,
+    &__email,
+    &__body {
+
+        @include respond (break-740) { width: 50rem; }
+        @include respond (break-600) { width: 45rem; }
+        @include respond (break-520) { width: 40rem; }
+        @include respond (break-470) { width: 90%; }
+
+        display: block;
+
+        border: none;
+        outline: none;
+
+        width: 60rem;
+        padding: 1.5rem;
+        border-radius: 5px;
+        resize: vertical;
+
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        color: $bg-grey-500;
+        border: 1px solid $bg-grey-200;
+        @include shadow-md;
+    }
+
+    &__name, &__email {
+
+        height: 4.5rem;
+    }
+
+    &__body {
+
+        min-height: 35rem;
+        max-height: 45rem;
+    }
+
+    &__submit {
+
+        margin: 2rem 0 0 0;
+        padding: 1.5rem 4.5rem;
+
+        border: none;
+        outline: none;
+
+        border-radius: 5px;
+        background-color: $bg-sky-500;
+        color: $bg-white;
+
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}

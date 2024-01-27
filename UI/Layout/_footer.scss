@@ -1,0 +1,140 @@
+.about {
+
+    @include respond (break-740) {
+
+        padding: 6.5rem 3rem;
+    }
+
+    @include respond (break-520) {
+
+        padding: 5rem 1.5rem;
+    }
+
+    width: 100%;
+    min-height: 50rem;
+    padding: 6.5rem;
+
+    background-color: rgba($bg-grey-050, .5);
+}
+
+.about {
+
+    &__brand,
+    &__description,
+    &__nav {
+
+        max-width: 128rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__brand,
+    &__description {
+
+        @include respond (break-520) {
+
+            text-align: left;
+        }
+    }
+
+    &__brand {
+
+        margin-bottom: .95rem;
+
+        font-size: 3.8rem;
+        font-weight: 600;
+        color: $bg-slate-700;
+
+    }
+
+    &__description {
+
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        border-bottom: 1px solid $bg-grey-400;
+    }
+
+    &__description { padding-bottom: 3.5rem; }
+    &__nav { margin-top: 3.5rem }
+
+    &__nav {
+
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    &__content {
+
+        @include respond (break-940) {
+
+            grid-template-columns: repeat(3, max-content);
+        }
+
+        @include respond (break-785) {
+
+            grid-template-columns: repeat(2, max-content);
+        }
+
+        @include respond (break-440) {
+
+            column-gap: 5rem;
+        }
+
+        @include respond (break-395) {
+
+            column-gap: 2.5rem;
+        }
+
+        min-height: max-content;
+
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        grid-template-rows: repeat(auto, max-content);
+        column-gap: 7.5rem;
+        row-gap: 5rem;
+    }
+
+    &__list {
+
+        width: max-content;
+        text-align: left;
+
+        &--heading { 
+
+            font-size: 1.8rem; 
+            font-weight: 500;
+            color: $bg-slate-900;
+        }
+
+        &--nav {
+
+            margin-top: 2.5rem;
+
+            display: flex;
+            flex-direction: column;
+
+            & > *:not(:last-child) { margin-bottom: 2.5rem; }
+        }
+
+        &--link {
+            
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: inherit;
+
+            &:hover { text-decoration: underline; }
+
+            @include respond (break-395) { font-size: 1.4rem; }
+        }
+    }
+
+    &__copyrights {
+
+        margin-top: 5rem;
+        
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+}
